@@ -1,55 +1,9 @@
-#======================================================================#
-#                          Christianah Adigun                          #
-#                          adigu002@d.umn.edu                          #
+The MIT License (MIT)
 
-#                           INSTRUCTION MANUAL                         #
+Copyright (c) 2017 Christianah Adigun
 
-#    A Step by step guide to creating hashes with my                   #
-#            NSC (Not-So-Craptographic) Hash function.                 #
-#======================================================================#
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-----------------------------------------
-Linux Terminal Command Line Arguments
-----------------------------------------
-Q. How to hash the input of a single file
-python hash.py DIR_PATH/YOUR_FILE_NAME
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-Q. How to create a log where the lines alternate between two slightly different orig and mod files:
-$ rm LOG_FILE; for I in $(seq start end); do python hash.py DIR_PATH/orig/$I >> LOG_FILE; python hash.py DIR_PATH/mod/$I >> LOG_FILE; done
-
-----------------------------------------
-IDLE Environment arguments
-----------------------------------------
-
-Q. How to hash the input of a single file
-	o Open the file hash.py with IDLE
-	o Select "Run" and click "Run Module"
-	o >>> chash('DIR_PATH/YOUR_FILE_NAME')
-
-The output of the hashed text is a 32-bit hex value. This algorithm has been analyzed based on the following critera:
-	o Uniform distribution of outputs
-	o Strict Avalanche Criterion (SAC): two inputs that differ by one or more bits should have “completely unrelated” hash outputs (all bits change with P(0.48), which is the equivalent of a new random bitstring).
-	o Collision resistance
-	o Preimage resistance
-  
-  
-  
-----------------------------------------
-Evaluating hash results
-----------------------------------------
-All values of input files can be written to a log file.
-The script evaluate.py analyzes each hex value for all inputs.
-
-On Linux:
-	o Run from the terminal
-	  python evaluate.py LOG_FILE
-	o The program writes values of average ratio of 1s in Columns to CSV file :: columns.csv
-	o The program writes values of differences to CSV file :: differences.csv
-
-
-On Windows:
-	o Open the file evaluate.py with IDLE
-	o Select "Run" and click "Run Module"
-	o Type evaluate('LOG_FILE') and press enter key
-	o The program writes values of average ratio of 1s in Columns to CSV file :: columns.csv
-	o The program writes values of differences to CSV file :: differences.csv
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
