@@ -1,24 +1,19 @@
 #======================================================================#
-
-Christianah Adigun
-
-adigu002@d.umn.edu
-
 INSTRUCTION MANUAL
-
-A Step by step guide to creating hashes with my
-
-NSC (Not-So-Craptographic) Hash function.
-
+Creating hashes with NSC (Not-So-Craptographic) Hash function.
 #======================================================================#
 
+----------------------------------------
 Linux Terminal Command Line Arguments
+----------------------------------------
 
 Q. How to hash the input of a single file python hash.py DIR_PATH/YOUR_FILE_NAME
 
 Q. How to create a log where the lines alternate between two slightly different orig and mod files: $ rm LOG_FILE; for I in $(seq start end); do python hash.py DIR_PATH/orig/$I >> LOG_FILE; python hash.py DIR_PATH/mod/$I >> LOG_FILE; done
 
+----------------------------------------
 IDLE Environment arguments
+----------------------------------------
 
 Q. How to hash the input of a single file o Open the file hash.py with IDLE o Select "Run" and click "Run Module" o >>> chash('DIR_PATH/YOUR_FILE_NAME')
 
